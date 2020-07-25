@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Page">
+    <templates/>
+    <policies
+        jcr:created="{Date}2020-07-21T00:10:26.238+05:30"
+        jcr:createdBy="admin"
+        jcr:mixinTypes="[rep:AccessControllable]"
+        jcr:primaryType="nt:unstructured">
+        <wcm jcr:primaryType="nt:unstructured">
+            <foundation jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <responsivegrid jcr:primaryType="nt:unstructured">
+                        <content-default
+                            jcr:description="Policy for editable layout containers"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="myaem Default"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[group:myaem,/apps/myaem/components/form/container]"
+                            policyResourceType="wcm/foundation/components/responsivegrid">
+                            <cq:authoring jcr:primaryType="nt:unstructured">
+                                <assetToComponentMapping jcr:primaryType="nt:unstructured">
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        assetGroup="media"
+                                        assetMimetype="image/*"
+                                        droptarget="image"
+                                        resourceType="myaem/components/content/image"
+                                        type="Images"/>
+                                </assetToComponentMapping>
+                            </cq:authoring>
+                            <jcr:content
+                                jcr:primaryType="nt:unstructured"
+                                mergeList="{Boolean}true"/>
+                        </content-default>
+                        <policy_114569881376900
+                            jcr:lastModified="{Date}2020-07-21T17:21:17.066+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="empreg policy"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/myaem/components/content/practise/employreg,/apps/myaem/components/structure/employregistration]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </policy_114569881376900>
+                    </responsivegrid>
+                </components>
+            </foundation>
+        </wcm>
+        <myaem jcr:primaryType="nt:unstructured">
+            <components jcr:primaryType="nt:unstructured">
+                <form jcr:primaryType="nt:unstructured">
+                    <container jcr:primaryType="nt:unstructured">
+                        <form-container
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="myaem Form"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/myaem/components/form/button,/apps/myaem/components/form/hidden,/apps/myaem/components/form/options,/apps/myaem/components/form/text]">
+                            <jcr:content jcr:primaryType="nt:unstructured"/>
+                        </form-container>
+                    </container>
+                </form>
+            </components>
+        </myaem>
+        <apps jcr:primaryType="nt:unstructured">
+            <myaem jcr:primaryType="nt:unstructured">
+                <components jcr:primaryType="nt:unstructured">
+                    <structure jcr:primaryType="nt:unstructured">
+                        <employregistration jcr:primaryType="nt:unstructured">
+                            <policy_1595332208570
+                                jcr:lastModified="{Date}2020-07-21T17:20:20.448+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="empreg policy"
+                                sling:resourceType="wcm/core/components/policy/policy"
+                                clientlibs="empreg">
+                                <jcr:content jcr:primaryType="nt:unstructured"/>
+                            </policy_1595332208570>
+                        </employregistration>
+                    </structure>
+                </components>
+            </myaem>
+        </apps>
+    </policies>
+    <template-types/>
+</jcr:root>
