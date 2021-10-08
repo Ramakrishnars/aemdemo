@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1595418637616
+Bnd-LastModified: 1633688949178
 Build-Jdk: 1.8.0_181
 Built-By: RAMAKRISHNA
 Bundle-Description: Core bundle for myaem
@@ -9,31 +9,31 @@ Bundle-SymbolicName: myaem.core
 Bundle-Version: 1.0.0.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
 Export-Package: com.aem.core.been;version="1.0.0",com.aem.core.dbutils;v
- ersion="1.0.0",com.aem.core.filters;version="1.0.0";uses:="javax.servle
- t",com.aem.core.listeners;version="1.0.0";uses:="org.osgi.service.event
- ",com.aem.core.models;version="1.0.0";uses:="javax.annotation,javax.inj
- ect,org.apache.sling.api.resource,org.apache.sling.models.annotations",
+ ersion="1.0.0",com.aem.core.filters;uses:="javax.servlet";version="1.0.
+ 0",com.aem.core.listeners;uses:="org.osgi.service.event";version="1.0.0
+ ",com.aem.core.models;uses:="javax.annotation,javax.inject,org.apache.s
+ ling.api.resource,org.apache.sling.models.annotations";version="1.0.0",
  com.aem.core;version="1.0",com.aem.core.schedulers;version="1.0.0",com.
- aem.core.serviceimpl;version="1.0.0";uses:="com.aem.core.been,com.aem.c
- ore.services",com.aem.core.services;version="1.0.0";uses:="com.aem.core
- .been",com.aem.core.servlets;version="1.0.0";uses:="javax.servlet,org.a
- pache.sling.api,org.apache.sling.api.servlets"
-Import-Package: javax.inject;version="0.0.0",com.aem.core.been;version="
- [1.0,2)",com.aem.core.dbutils;version="[1.0,2)",com.aem.core.services;v
- ersion="[1.0,2)",com.day.commons.datasource.poolservice;version="[1.1,2
- )",javax.annotation,javax.servlet,javax.sql,org.apache.sling.api;versio
- n="[2.3,3)",org.apache.sling.api.request;version="[2.4,3)",org.apache.s
- ling.api.resource;version="[2.10,3)",org.apache.sling.api.servlets;vers
- ion="[2.2,3)",org.apache.sling.models.annotations;version="[1.5,2)",org
- .apache.sling.settings;version="[1.3,2)",org.osgi.service.event;version
- ="[1.3,2)",org.slf4j;version="[1.7,2)"
+ aem.core.serviceimpl;uses:="com.aem.core.been,com.aem.core.services";ve
+ rsion="1.0.0",com.aem.core.services;uses:="com.aem.core.been";version="
+ 1.0.0",com.aem.core.servlets;uses:="javax.servlet,org.apache.sling.api,
+ org.apache.sling.api.servlets";version="1.0.0"
+Import-Package: javax.inject;version="0.0.0",com.aem.core.been,com.aem.c
+ ore.dbutils,com.aem.core.services,com.day.commons.datasource.poolservic
+ e;version="[1.1,2)",javax.annotation,javax.servlet,javax.sql,org.apache
+ .sling.api;version="[2.3,3)",org.apache.sling.api.request;version="[2.4
+ ,3)",org.apache.sling.api.resource;version="[2.10,3)",org.apache.sling.
+ api.servlets;version="[2.2,3)",org.apache.sling.models.annotations;vers
+ ion="[1.5,2)",org.apache.sling.settings;version="[1.3,2)",org.osgi.serv
+ ice.event;version="[1.3,2)",org.slf4j;version="[1.7,2)"
 Provide-Capability: osgi.service;objectClass:List<String>="com.aem.core.
  dbutils.DatabaseConnectionHelper",osgi.service;objectClass:List<String>
- ="com.aem.core.services.EmployeeI",osgi.service;objectClass:List<String
- >="java.lang.Runnable",osgi.service;objectClass:List<String>="javax.ser
- vlet.Filter",osgi.service;objectClass:List<String>="javax.servlet.Servl
- et",osgi.service;objectClass:List<String>="org.osgi.service.event.Event
- Handler"
+ ="com.aem.core.serviceimpl.SightlyService",osgi.service;objectClass:Lis
+ t<String>="com.aem.core.services.EmployeeI",osgi.service;objectClass:Li
+ st<String>="java.lang.Runnable",osgi.service;objectClass:List<String>="
+ javax.servlet.Filter",osgi.service;objectClass:List<String>="javax.serv
+ let.Servlet",osgi.service;objectClass:List<String>="org.osgi.service.ev
+ ent.EventHandler"
 Require-Capability: osgi.extender;filter:="(&(osgi.extender=osgi.compone
  nt)(version>=1.3.0)(!(version>=2.0.0)))",osgi.service;filter:="(objectC
  lass=com.aem.core.dbutils.DatabaseConnectionHelper)";effective:=active,
@@ -45,8 +45,9 @@ Service-Component: OSGI-INF/com.aem.core.dbutils.DatabaseConnectionHelpe
  r.xml,OSGI-INF/com.aem.core.filters.LoggingFilter.xml,OSGI-INF/com.aem.
  core.listeners.SimpleResourceListener.xml,OSGI-INF/com.aem.core.schedul
  ers.SimpleScheduledTask.xml,OSGI-INF/com.aem.core.serviceimpl.EmployeeI
- mpl.xml,OSGI-INF/com.aem.core.servlets.EmployeeRegisterServlet.xml,OSGI
- -INF/com.aem.core.servlets.SimpleServlet.xml,OSGI-INF/com.aem.core.serv
- lets.TestingServlet.xml
+ mpl.xml,OSGI-INF/com.aem.core.serviceimpl.SightlyService.xml,OSGI-INF/c
+ om.aem.core.servlets.EmployeeRegisterServlet.xml,OSGI-INF/com.aem.core.
+ servlets.SimpleServlet.xml,OSGI-INF/com.aem.core.servlets.TestingServle
+ t.xml
 Sling-Model-Packages: com.aem.core
 Tool: Bnd-3.3.0.201609221906

@@ -7,7 +7,9 @@ com\aem\core\models\HelloWorldModel.class
 com\aem\core\serviceimpl\EmployeeImpl.class
 com\aem\core\schedulers\SimpleScheduledTask.class
 com\aem\core\dbutils\DatabaseConnectionHelper.class
+com\aem\core\services\SightlyServiceInterface.class
 com\aem\core\filters\LoggingFilter.class
 com\aem\core\servlets\EmployeeRegisterServlet.class
 com\aem\core\schedulers\SimpleScheduledTask$Config.class
 com\aem\core\services\EmployeeI.class
+com\aem\core\serviceimpl\SightlyService.class
